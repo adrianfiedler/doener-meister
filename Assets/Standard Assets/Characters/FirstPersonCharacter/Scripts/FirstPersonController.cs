@@ -110,7 +110,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_MoveDir.x = desiredMove.x*speed;
             m_MoveDir.z = desiredMove.z*speed;
 
-            // m_animator.SetFloat("Speed", speed);
+            m_animator.SetFloat("Speed", m_MoveDir.magnitude);
 
 
             if (m_CharacterController.isGrounded)
