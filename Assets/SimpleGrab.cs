@@ -92,6 +92,6 @@ public class SimpleGrab : MonoBehaviour
         item.Rb.isKinematic = false;
 
         // Add force to throw item a little bit
-        item.Rb.AddForce(new Vector3(5*Random.Range(0, 2),5*Random.Range(0, 2),5*Random.Range(0, 2)), ForceMode.VelocityChange);
+        item.Rb.AddForce(characterCamera.transform.forward * 15, ForceMode.VelocityChange);
     }
 }
