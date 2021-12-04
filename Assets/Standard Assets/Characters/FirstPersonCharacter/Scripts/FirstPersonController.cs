@@ -42,6 +42,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private bool m_Jumping;
         private AudioSource m_AudioSource;
 
+        public Animator m_animator;
+
         // Use this for initialization
         private void Start()
         {
@@ -107,6 +109,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
             m_MoveDir.x = desiredMove.x*speed;
             m_MoveDir.z = desiredMove.z*speed;
+
+            // m_animator.SetFloat("Speed", speed);
 
 
             if (m_CharacterController.isGrounded)
